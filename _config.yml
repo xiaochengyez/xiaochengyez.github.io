@@ -1,15 +1,15 @@
-#
+﻿#
 # This file contains configuration flags to customize your site
 #
 
 # Name of your site (displayed in the header)
-name: gongxc
+name: 龚晓成的博客
 
 # Short bio or description (displayed in the header)
-description: Web Developer from Somewhere
+description: https://xiaochengyez.github.io
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: https://avatars3.githubusercontent.com/u/48740941?s=400&u=15feddc5a3bfd95b8361aaac98bd6243e12ea817&v=4
 
 #
 # Flags below are optional
@@ -21,12 +21,12 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: barryclark/jekyll-now
+  github: xiaochengyez
   instagram:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+  twitter: gongxc
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
