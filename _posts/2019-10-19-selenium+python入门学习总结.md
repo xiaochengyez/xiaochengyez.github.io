@@ -17,20 +17,20 @@ python3.6之后的版本都可以直接使用下面命令来下载selenium
 
 ## 3.编写自动化脚本
 - 编写简单的打开百度搜索selenium的自动化脚本
-  `from selenium import webdriver
-  #打开浏览器
-  browser = webdriver.Chrome()
-  #打开百度
-  browser.get('https://www.baidu.com')
-  #输入selenium
-  browser.find_element_by_id('kw').send_keys('selenium')
-  #点击百度一下
-  browser.find_element_by_id('su').click()
-  #断言selenium在页面中
-  assert 'selenium' in browser.page_source
-  #退出浏览器
-  browser.quit()
-  `
+-  `from selenium import webdriver`
+-  #打开浏览器
+-  `browser = webdriver.Chrome()`
+-  #打开百度
+-  `browser.get('https://www.baidu.com')`
+-  #输入selenium
+-  `browser.find_element_by_id('kw').send_keys('selenium')`
+-  #点击百度一下
+-  `browser.find_element_by_id('su').click()`
+-  #断言selenium在页面中
+-  `assert 'selenium' in browser.page_source`
+-  #退出浏览器
+-  `browser.quit()`
+
 ## 4.定位元素
 - 定位元素的方法如下：
 - `find_element_by_id` 通过id定位
@@ -45,42 +45,42 @@ python3.6之后的版本都可以直接使用下面命令来下载selenium
 ## 5.等待方式
 - Selenium Webdriver提供两种类型的等待-隐式和显式。
 - 显示等待:客户端轮询查找，每找一次元素，等待一个间隔再次查找，知道条件匹配，一次性的。
-`WebDriverWait(driver, 10).until(
+- `WebDriverWait(driver, 10).until(
                   EC.presence_of_element_located((By.ID,location))
               )`
 - 隐式等待：服务端会帮你轮询查找，全局性的
- `driver.implicitly_wait(10)`
+-  `driver.implicitly_wait(10)`
 - 极端情况下也可以使用强制等待方式
-`time.sleep（）`
+- `time.sleep（）`
 - 例：
-`import time
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
+- `import time`
+- `from selenium import webdriver`
+- `from selenium.webdriver.common.by import By`
+- `from selenium.webdriver.support import expected_conditions`
+- `from selenium.webdriver.support.wait import WebDriverWait`
 
-driver = webdriver.Chrome()
-driver.get('https://www.baidu.com')
-#隐式等待5秒
-driver.implicitly_wait(5)
-driver.find_element(By.CLASS_NAME,'s_ipt').send_keys('selenium')
-#显示等待5秒等到.s_btn元素能够被点击
-WebDriverWait(driver,5).until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR,'.s_btn')))
-driver.find_element(By.CSS_SELECTOR,'.s_btn').click()
-assert 'selenium' in driver.page_source
-#强制等待5秒
-time.sleep(5)
-driver.quit()
-`
+- `driver = webdriver.Chrome()`
+- `driver.get('https://www.baidu.com')`
+- #隐式等待5秒
+- `driver.implicitly_wait(5)`
+- `driver.find_element(By.CLASS_NAME,'s_ipt').send_keys('selenium')`
+- #显示等待5秒等到.s_btn元素能够被点击
+- `WebDriverWait(driver,5).until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR,'.s_btn')))`
+- `driver.find_element(By.CSS_SELECTOR,'.s_btn').click()`
+- `assert 'selenium' in driver.page_source`
+- #强制等待5秒
+- `time.sleep(5)`
+- `driver.quit()`
+
 ## 6.心得
 - 到这里selenium已经入门啦，想要高效率、准确性地跑测试用例进行web自动化测试就需要对方法、用例进行封装改造，采用PO模式来进行框架的封装。
 - selenium其他常用API可以自己去尝试、探索，进阶内容敬请期待
 - PO原则
-    The public methods represent the services that the page offers
-    Try not to expose the internals of the page
-    Generally don't make assertions
-    Methods return other PageObjects
-    Need not represent an entire page
-    Different results for the same action are modelled as different methods
+-    `The public methods represent the services that the page offers`
+-    `Try not to expose the internals of the page`
+-    `Generally don't make assertions`
+-    `Methods return other PageObjects`
+-    `Need not represent an entire page`
+-    `Different results for the same action are modelled as different methods`
 - 参考文档
- https://selenium-python.readthedocs.io
+- https://selenium-python.readthedocs.io
