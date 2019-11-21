@@ -53,24 +53,27 @@ python3.6之后的版本都可以直接使用下面命令来下载selenium
 - 极端情况下也可以使用强制等待方式
 - `time.sleep（）`
 - 例：
-- `import time`
-- `from selenium import webdriver`
-- `from selenium.webdriver.common.by import By`
-- `from selenium.webdriver.support import expected_conditions`
-- `from selenium.webdriver.support.wait import WebDriverWait`
 
-- `driver = webdriver.Chrome()`
-- `driver.get('https://www.baidu.com')`
-- #隐式等待5秒
-- `driver.implicitly_wait(5)`
-- `driver.find_element(By.CLASS_NAME,'s_ipt').send_keys('selenium')`
-- #显示等待5秒等到.s_btn元素能够被点击
-- `WebDriverWait(driver,5).until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR,'.s_btn')))`
-- `driver.find_element(By.CSS_SELECTOR,'.s_btn').click()`
-- `assert 'selenium' in driver.page_source`
-- #强制等待5秒
-- `time.sleep(5)`
-- `driver.quit()`
+```
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+
+driver = webdriver.Chrome()
+driver.get('https://www.baidu.com')
+#隐式等待5秒
+driver.implicitly_wait(5)
+driver.find_element(By.CLASS_NAME,'s_ipt').send_keys('selenium')
+#显示等待5秒等到.s_btn元素能够被点击
+WebDriverWait(driver,5).until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR,'.s_btn')))
+driver.find_element(By.CSS_SELECTOR,'.s_btn').click()
+assert 'selenium' in driver.page_source
+#强制等待5秒
+time.sleep(5)
+driver.quit()
+```
 
 ## 6.心得
 - 到这里selenium已经入门啦，想要高效率、准确性地跑测试用例进行web自动化测试就需要对方法、用例进行封装改造，采用PO模式来进行框架的封装。

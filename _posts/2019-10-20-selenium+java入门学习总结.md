@@ -31,26 +31,26 @@
 
 ## 3.编写自动化脚本
 - 编写简单的打开百度搜索selenium的自动化脚本
-```
-#打开浏览器
-WebDriver webDriver = new ChromeDriver();
-#窗口最大化
-webDriver.manage().window().maximize();
-#打开百度
-webDriver.get("https://www.baidu.com");
-#隐式等待5秒
-webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-#输入框输入selenium
-webDriver.findElement(By.id("kw")).sendKeys("selenium");
-#点击百度一下
-webDriver.findElement(By.cssSelector(".s_btn")).click();
-#刷新网页
-webDriver.navigate().refresh();
-#等待5秒
-Thread.sleep(5000);
-#退出
-webDriver.quit();
-```
+- #打开浏览器
+- `WebDriver webDriver = new ChromeDriver();`
+- #窗口最大化
+- `webDriver.manage().window().maximize();`
+- #打开百度
+- `webDriver.get("https://www.baidu.com");`
+- #隐式等待5秒
+- `webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);`
+- #输入框输入selenium
+- `webDriver.findElement(By.id("kw")).sendKeys("selenium");`
+- #点击百度一下
+- `webDriver.findElement(By.cssSelector(".s_btn")).click();`
+- #刷新网页
+- `webDriver.navigate().refresh();`
+- #等待5秒
+- `Thread.sleep(5000);`
+- #退出
+- `webDriver.quit();`
+
+
 ## 4.定位元素
 - 8种定位元素的方法：
 - `findElement(By.id())` 通过id定位
