@@ -4,7 +4,7 @@
 # 二、selenium简单使用
 ## 1.新建maven项目
 - 加入依赖
-<dependency>
+`<dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-api</artifactId>
       <version>3.141.59</version>
@@ -15,7 +15,8 @@
       <artifactId>selenium-chrome-driver</artifactId>
       <version>3.141.59</version>
       <scope>test</scope>
-  </dependency>
+  </dependency>`
+  
 ## 2.下载驱动
 - Selenium需要驱动程序才能与所选浏览器交互.驱动程序下载地址:
 - Chrome:	[Chromedriver下载地址](https://sites.google.com/a/chromium.org/chromedriver/downloads)
