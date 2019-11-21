@@ -4,18 +4,21 @@
 # 二、selenium简单使用
 ## 1.新建maven项目
 - 加入依赖
--  `<dependency>`
--     `<groupId>org.seleniumhq.selenium</groupId>`
--     `<artifactId>selenium-api</artifactId>`
--     `<version>3.141.59</version>`
--     `<scope>test</scope>`
--  `</dependency>`
--  `<dependency>`
--     `<groupId>org.seleniumhq.selenium</groupId>`
--     `<artifactId>selenium-chrome-driver</artifactId>`
--     `<version>3.141.59</version>`
--     `<scope>test</scope>`
--  `</dependency>`
+```
+<dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-api</artifactId>
+         <version>3.141.59</version>
+         <scope>test</scope>
+</dependency>
+<dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-chrome-driver</artifactId>
+         <version>3.141.59</version>
+         <scope>test</scope>
+</dependency>
+
+```
 ## 2.下载驱动
 - Selenium需要驱动程序才能与所选浏览器交互.驱动程序下载地址:
 - Chrome:	[Chromedriver下载地址](https://sites.google.com/a/chromium.org/chromedriver/downloads)
@@ -28,25 +31,26 @@
 
 ## 3.编写自动化脚本
 - 编写简单的打开百度搜索selenium的自动化脚本
--  #打开浏览器
--  `WebDriver webDriver = new ChromeDriver();`
--  #窗口最大化
--  `webDriver.manage().window().maximize();`
--  #打开百度
--  `webDriver.get("https://www.baidu.com");`
--  #隐式等待5秒
--  `webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);`
--  #输入框输入selenium
--  `webDriver.findElement(By.id("kw")).sendKeys("selenium");`
--  #点击百度一下
--  `webDriver.findElement(By.cssSelector(".s_btn")).click();`
--  #刷新网页
--  `webDriver.navigate().refresh();`
--  #等待5秒
--  `Thread.sleep(5000);`
--  #退出
--  `webDriver.quit();`
-
+```
+#打开浏览器
+WebDriver webDriver = new ChromeDriver();
+#窗口最大化
+webDriver.manage().window().maximize();
+#打开百度
+webDriver.get("https://www.baidu.com");
+#隐式等待5秒
+webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+#输入框输入selenium
+webDriver.findElement(By.id("kw")).sendKeys("selenium");
+#点击百度一下
+webDriver.findElement(By.cssSelector(".s_btn")).click();
+#刷新网页
+webDriver.navigate().refresh();
+#等待5秒
+Thread.sleep(5000);
+#退出
+webDriver.quit();
+```
 ## 4.定位元素
 - 8种定位元素的方法：
 - `findElement(By.id())` 通过id定位
