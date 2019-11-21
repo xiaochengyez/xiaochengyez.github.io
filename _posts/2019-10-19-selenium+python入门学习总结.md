@@ -8,10 +8,10 @@ python3.6之后的版本都可以直接使用下面命令来下载selenium
 
 ## 2.下载驱动
 - Selenium需要驱动程序才能与所选浏览器交互.驱动程序下载地址:
-- Chrome:	https://sites.google.com/a/chromium.org/chromedriver/downloads
-- Edge:	https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
-- Firefox:	https://github.com/mozilla/geckodriver/releases
-- Safari:	https://webkit.org/blog/6900/webdriver-support-in-safari-10/
+- Chrome:	[Chromedriver下载地址](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+- Edge:	[webdriver下载地址](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+- Firefox:	[geckodriver下载地址](https://github.com/mozilla/geckodriver/releases)
+- Safari:	[下载地址](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)
 - 注：不同版本的浏览器对应不同版本的驱动，一定要保证浏览器和驱动版本对应。
       下载好的驱动需要加入环境变量中。
 
@@ -83,4 +83,4 @@ python3.6之后的版本都可以直接使用下面命令来下载selenium
 -    `Need not represent an entire page`
 -    `Different results for the same action are modelled as different methods`
 - 参考文档
-- https://selenium-python.readthedocs.io
+- [https://selenium-python.readthedocs.io](https://selenium-python.readthedocs.io)
