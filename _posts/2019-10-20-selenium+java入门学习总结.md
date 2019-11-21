@@ -3,7 +3,6 @@
 
 # 二、selenium简单使用
 ## 1.新建maven项目
-- 加入依赖
 ```
 <dependency>
          <groupId>org.seleniumhq.selenium</groupId>
